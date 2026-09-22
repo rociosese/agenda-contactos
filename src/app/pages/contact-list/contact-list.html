@@ -1,0 +1,38 @@
+<h1>Mis contactos</h1>
+
+@for (contacto of contactsService.contactslist; track $index) {
+    
+    <div class="contact-card">
+        <a [routerLink]="['/contacts', contacto.id]">
+
+            <span class="contact-image">
+                <img src="img/no-image.webp" alt="Foto del contacto">
+            </span>
+
+            <span>
+                <p>ID: {{contacto.id}}</p>
+            </span>
+
+            <span>
+                <h2>{{contacto.nombre}} {{contacto.apellido}}</h2>
+            </span>
+
+            <span>
+                <p>{{contacto.numeroTelefono}}</p>
+            </span>
+
+        </a>
+
+    </div>
+
+    <div>
+    <button>Editar</button>
+    <button>Eliminar</button>
+    </div>
+}
+
+
+
+<button routerLink="/contacts/create">
+    Agregar contacto
+</button>   
