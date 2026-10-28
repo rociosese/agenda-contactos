@@ -1,28 +1,35 @@
- h1 {
+h1 {
     text-align: center;
     background-color: #17375e;
     color: white;
     padding: 25px;
     margin: 0;
- }
+}
 
- .contact-card {
-    max-width: 600px;
+.contact-card {
+    max-width: 800px;
     margin: 12px auto;
- }  
+    padding: 15px;
 
- .contact-card a{
+    display: flex;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* DATOS DEL CONTACTO */
+.contact-card > a {
     display: flex;
     align-items: center;
     gap: 15px;
-    padding: 15px;
-    background-color: #f5f5f5;
+
+    color: black;
     text-decoration: none;
-    color: #0c0c0c;
-    border-radius: 12px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* FOTO */
 .contact-card img {
     width: 45px;
     height: 45px;
@@ -30,18 +37,66 @@
     object-fit: cover;
 }
 
+/* ID */
+.contact-card > a span:nth-child(2) {
+    width: 45px;
+}
+
+/* NOMBRE */
+.contact-card > a span:nth-child(3) {
+    width: 160px;
+}
+
+/* TELÉFONO */
+.contact-card > a span:nth-child(4) {
+    width: 110px;
+}
+
+/* EDITAR Y ELIMINAR */
+.contact-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.contact-actions .button,
+.contact-actions button {
+    margin: 0;
+    padding: 8px 12px;
+
+    background-color: #17375e;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.contact-actions .button:hover,
+.contact-actions button:hover {
+    background-color: #245080;
+}
+
+/* BOTÓN AGREGAR CONTACTO */
 button {
-   display: block;
-   margin: 25px auto;
-   padding: 12px 25px;
-   background-color: #17375e;
-   color: white;
-   border: none;
-   border-radius: 8px;
-   font-size: 16px;
-   cursor: pointer;
+    display: block;
+    margin: 25px auto;
+    padding: 12px 25px;
+
+    background-color: #17375e;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    cursor: pointer;
 }
 
 button:hover {
-   background-color: #245080;
+    background-color: #245080;
 }

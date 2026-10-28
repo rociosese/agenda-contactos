@@ -1,9 +1,29 @@
-<a routerLink="/contacts">Volver</a>
-<h1>ID actual: {{id()}}</h1>
-<h1>Nombre y Apellido contacto {{contacto?.nombre}} {{contacto?.apellido}}</h1>
+<a class="volver" routerLink="/contacts">← Volver</a>
 
-<p>Telefono: {{contacto?.numeroTelefono}}</p>
-<p>Email: {{contacto?.email}}</p>
-<p>Dirección: {{contacto?.direccion}}</p>
+<div class="details-card">
 
+    <h1>Detalle del contacto</h1>
 
+    <div class="contact-info">
+        <p><strong>ID:</strong> {{id()}}</p>
+
+        <h2>{{contacto()?.firstName}} {{contacto()?.lastName}}</h2>
+
+        <p><strong>Teléfono:</strong> {{contacto()?.number}}</p>
+        <p><strong>Email:</strong> {{contacto()?.email}}</p>
+        <p><strong>Dirección:</strong> {{contacto()?.address}}</p>
+    </div>
+
+    <div class="actions">
+        <a
+            class="edit-button"
+            [routerLink]="['/contacts', id(), 'edit']">
+            Editar contacto
+        </a>
+
+        <button (click)="eliminarContacto(contacto()!.id)">
+            Eliminar contacto
+        </button>
+    </div>
+
+</div>

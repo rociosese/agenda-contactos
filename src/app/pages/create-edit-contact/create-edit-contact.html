@@ -1,11 +1,13 @@
 <form (submit)="onSubmit($event)">
-    
-    <label for="nombre">Nombre:</label>
-    <input type="text" [formField]="formCreateContact.nombre" id="nombre" />
-    <label for="apellido">Apellido:</label>
-    <input type="text" [formField]="formCreateContact.apellido" id="apellido" />
-    <label for="numeroTelefono">Número de Teléfono:</label>
-    <input type="tel" [formField]="formCreateContact.numeroTelefono" id="numeroTelefono" />
 
-    <button type="submit">Crear Contacto</button>
+    <label for="nombre">Nombre:</label>
+    <input type="text" [formField]="formCreateContact.firstName" id="nombre" />
+    <label for="apellido">Apellido:</label>
+    <input type="text" [formField]="formCreateContact.lastName" id="apellido" />
+    <label for="numeroTelefono">Número de Teléfono:</label>
+    <input type="tel" [formField]="formCreateContact.number!" id="numeroTelefono" />
+
+    <button type="submit">
+    {{id() ? 'Editar contacto' : 'Agregar contacto'}}
+</button>
 </form>
